@@ -11,10 +11,7 @@ export class StatutsService {
     @Inject(POST_MODEL_PROVIDER) private readonly statutModel: Model<Statut>) { }
   
   async create(createStatutDto: CreateStatutDto): Promise<Statut> {
-    console.log('gizehgoezjfpoze')
     const createdStatut = new this.statutModel(createStatutDto);
-    console.log(this.statutModel.baseModelName);
-    console.log(this.statutModel.db.modelNames());
     return await createdStatut.save();
   }
 

@@ -1,18 +1,17 @@
 import { ApiModelProperty } from '@nestjs/swagger';
 
-export class CreateAnomalieDto {
+export class CreateAssignationDto {
   @ApiModelProperty()
-  readonly id_anomalie: string;
+  readonly id_assignation: string;
   
   @ApiModelProperty()
-  readonly intitule: string;
+  readonly id_utilisateur: string;
   
   @ApiModelProperty()
   readonly id_portique: string;
   
   @ApiModelProperty()
-  readonly id_status: string;
-
-  @ApiModelProperty()
-  readonly created_at: Date;
+  readonly id_type_evenement: string;
 }
+
+

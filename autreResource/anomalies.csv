@@ -1,4 +1,4 @@
-id;intitule;id_machine;id_status;created_at
-501;Manque de produit netoyant;601;401;2019-06-08
-502;Bras mécanique endommagé;602;402;2019-04-12
-503;Manque de produit netoyant;603;403;2019-02-04
+id_anomalie,intitule,id_portique,id_status,created_at
+501,Manque de produit netoyant,601,401,2019-06-08
+502,Bras mecanique endommage,602,402,2019-04-12
+503,Manque de produit netoyant,603,403,2019-02-04

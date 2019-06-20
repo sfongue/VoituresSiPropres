@@ -1,6 +1,6 @@
-id;nom;prenom;telephone;email;mot_de_passe;id_role;id_portefeuille
-1;DiCaprio;Leonardo;0602040608;leo@gmail.com;DiCaprio;3;101
-2;Eastwood;Clint;0604060802;clint@gmail.com;Eastwood;1;102
-3;De Niro;Robert;0606080204;robert@gmail.com;De Niro;2;103
-4;Pacino;Al;0608020406;al@gmail.com;Pacino;3;104
-5;Freeman;Morgan;0602060802;morgan@gmail.com;Freeman;3;105
+id_utilisateur,nom,prenom,telephone,email,mot_de_passe,id_role,id_portefeuille
+1,DiCaprio,Leonardo,0602040608,leo@gmail.com,DiCaprio,3,101
+2,Eastwood,Clint,0604060802,clint@gmail.com,Eastwood,1,102
+3,De Niro,Robert,0606080204,robert@gmail.com,De Niro,2,103
+4,Pacino,Al,0608020406,al@gmail.com,Pacino,3,104
+5,Freeman,Morgan,0602060802,morgan@gmail.com,Freeman,3,105

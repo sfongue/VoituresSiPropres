@@ -1,4 +1,4 @@
-id;intitule
-1;Administrateur
-2;Technicien
-3;Client
+id_role,intitule
+1,Administrateur
+2,Technicien
+3,Client

@@ -4,7 +4,7 @@ import { StatutsService } from './statuts.service';
 import { ApiUseTags } from '@nestjs/swagger';
 import { Statut as StatutInterface } from './interfaces/statut.interface';
 
-@ApiUseTags('status')
+@ApiUseTags('statuts')
 @Controller('statuts')
 export class StatutsController {
     constructor(private readonly statutsService: StatutsService) { }

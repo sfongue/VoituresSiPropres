@@ -10,13 +10,13 @@ async function bootstrap() {
     .setDescription('Description de l\'API de lavage de voiture')
     .setVersion('1.0')
     .addTag('statuts')
-    .addTag('role')
-    .addTag('utilisateur')
-    .addTag('portefeuille')
-    .addTag('type-evenement')
-    .addTag('assignation')
-    .addTag('portique')
-    .addTag('anomalie')
+    .addTag('roles')
+    .addTag('utilisateurs')
+    .addTag('portefeuilles')
+    .addTag('type-evenements')
+    .addTag('assignations')
+    .addTag('portiques')
+    .addTag('anomalies')
     .build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('api', app, document);

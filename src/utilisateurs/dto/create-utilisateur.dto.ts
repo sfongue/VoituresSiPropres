@@ -1,5 +1,3 @@
-import { ObjectId } from "bson";
-
 export class CreateUtilisateurDto {
   readonly id_utilisateur: string;
   readonly nom: string;

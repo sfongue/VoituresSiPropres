@@ -1,3 +1,9 @@
+## TO DO
+ - Attribuer des routes pour appeler les méthodes put, delete et get dans l'url
+ - Authentification
+ - CRUD pour les collections utilisateurs et type-evenement
+ - Centraliser les méthodes put, delete et getById dans le main.service
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>

@@ -1,4 +1,4 @@
-﻿id;intitule;created_at;updated_at
-201;Lavage express;2019-02-04;
-202;Lavage standard;2019-04-12;
-203;Lavage premium;2019-06-08;
+﻿id_type_evenement,intitule,created_at,updated_at
+201,Lavage express,2019-02-04,
+202,Lavage standard,2019-04-12,
+203,Lavage premium,2019-06-08,

@@ -18,4 +18,9 @@ export class AssignationsController {
     async findAll(): Promise<AssignationInterface[]> {
       return this.assignationsService.findAll();
     }
+
+    // @Get('id')
+    // async findById(id): Promise<AssignationInterface[]> {
+    //   return this.assignationsService.findById(id);
+    // }
 }

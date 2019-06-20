@@ -4,18 +4,13 @@ import { Inject, Injectable } from '@nestjs/common';
 import { Statut } from './interfaces/statut.interface';
 import { CreateStatutDto } from './dto/create-statut.dto';
 import { POST_MODEL_PROVIDER } from '../constants';
+import { MainService } from '../main.service';
 
 @Injectable()
-export class StatutsService {
+export class StatutsService extends MainService<Statut, CreateStatutDto> {
   constructor(
-    @Inject(POST_MODEL_PROVIDER) private readonly statutModel: Model<Statut>) { }
+    @Inject(POST_MODEL_PROVIDER) private readonly statutModel: Model<Statut>) {
+		super(statutModel);
+	}
   
-  async create(createStatutDto: CreateStatutDto): Promise<Statut> {
-    const createdStatut = new this.statutModel(createStatutDto);
-    return await createdStatut.save();
-  }
-
-  async findAll(): Promise<Statut[]> {
-    return await this.statutModel.find().exec();
-  }
 }

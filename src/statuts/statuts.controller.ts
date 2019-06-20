@@ -1,8 +1,10 @@
 import { Controller, Get, Post, Body, Delete } from '@nestjs/common';
 import { CreateStatutDto } from './dto/create-statut.dto';
 import { StatutsService } from './statuts.service';
+import { ApiUseTags } from '@nestjs/swagger';
 import { Statut as StatutInterface } from './interfaces/statut.interface';
 
+@ApiUseTags('status')
 @Controller('statuts')
 export class StatutsController {
     constructor(private readonly statutsService: StatutsService) { }

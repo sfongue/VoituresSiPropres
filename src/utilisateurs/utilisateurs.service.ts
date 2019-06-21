@@ -18,7 +18,7 @@ export class UtilisateursService extends MainService<Utilisateur, CreateUtilisat
 		return await this.utilisateurModel.findById(id);
 	  }
 	
-	  async updateUtilisateur(id: string, utilisateur: Object) {
+	  async updateUtilisateur(id: string, utilisateur: CreateUtilisateurDto) {
 		return await this.utilisateurModel.findByIdAndUpdate(id, utilisateur);
 	  }
 	

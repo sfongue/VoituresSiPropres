@@ -17,7 +17,7 @@ export class AssignationsService extends MainService<Assignation, CreateAssignat
 		return await this.assignationModel.findById(id);
 	  }
 	
-	  async updateAssignation(id: string, assignation: Object) {
+	  async updateAssignation(id: string, assignation: CreateAssignationDto) {
 		return await this.assignationModel.findByIdAndUpdate(id, assignation);
 	  }
 	

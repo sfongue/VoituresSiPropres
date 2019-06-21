@@ -25,7 +25,7 @@ export class StatutsController {
     } 
 
     @Put(':id')
-    async updateStatut(@Param('id') id: string, @Param('statut') statut: Object) {
+    async updateStatut(@Param('id') id: string, @Body() statut: CreateStatutDto) {
       return this.statutsService.updateStatut(id, statut);
     }
 

@@ -25,7 +25,7 @@ export class TypeEvenementsController {
     } 
 
     @Put(':id')
-    async updateTypeEvenement(@Param('id') id: string, @Param('type_evenement') typeEvenement: Object) {
+    async updateTypeEvenement(@Param('id') id: string, @Body() typeEvenement: CreateTypeEvenementDto) {
       return this.typeEvenementsService.updateTypeEvenement(id, typeEvenement);
     }
 

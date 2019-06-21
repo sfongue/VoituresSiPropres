@@ -18,7 +18,7 @@ export class AnomaliesService extends MainService<Anomalie, CreateAnomalieDto> {
     return await this.anomalieModel.findById(id_anomalie);
   }
 
-  async updateAnomalie(id_anomalie: string, anomalie: Object) {
+  async updateAnomalie(id_anomalie: string, anomalie: CreateAnomalieDto) {
     return await this.anomalieModel.findByIdAndUpdate(id_anomalie, anomalie);
   }
 

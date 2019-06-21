@@ -25,7 +25,7 @@ export class PortefeuillesController {
     } 
 
     @Put(':id')
-    async updatePortefeuille(@Param('id') id: string, @Param('portefeuille') portefeuille: Object) {
+    async updatePortefeuille(@Param('id') id: string, @Body() portefeuille: CreatePortefeuilleDto) {
       return this.portefeuillesService.updatePortefeuille(id, portefeuille);
     }
 

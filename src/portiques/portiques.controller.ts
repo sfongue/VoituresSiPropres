@@ -25,7 +25,7 @@ export class PortiquesController {
     } 
 
     @Put(':id')
-    async updatePortique(@Param('id') id: string, @Param('portique') portique: Object) {
+    async updatePortique(@Param('id') id: string, @Body() portique: CreatePortiqueDto) {
       return this.portiquesService.updatePortique(id, portique);
     }
 

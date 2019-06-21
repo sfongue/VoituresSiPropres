@@ -25,7 +25,7 @@ export class AssignationsController {
     } 
 
     @Put(':id')
-    async updateAssignation(@Param('id') id: string, @Param('assignation') assignation: Object) {
+    async updateAssignation(@Param('id') id: string, @Body() assignation: CreateAssignationDto) {
       return this.assignationsService.updateAssignation(id, assignation);
     }
 

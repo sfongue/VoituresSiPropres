@@ -17,7 +17,7 @@ export class StatutsService extends MainService<Statut, CreateStatutDto> {
 		return await this.statutModel.findById(id);
 	  }
 	
-	  async updateStatut(id: string, statut: Object) {
+	  async updateStatut(id: string, statut: CreateStatutDto) {
 		return await this.statutModel.findByIdAndUpdate(id, statut);
 	  }
 	

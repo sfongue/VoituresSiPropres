@@ -18,7 +18,7 @@ export class RolesService extends MainService<Role, CreateRoleDto> {
 		return await this.roleModel.findById(id);
 	  }
 	
-	  async updateRole(id: string, role: Object) {
+	  async updateRole(id: string, role: CreateRoleDto) {
 		return await this.roleModel.findByIdAndUpdate(id, role);
 	  }
 	

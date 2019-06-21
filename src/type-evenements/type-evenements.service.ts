@@ -18,7 +18,7 @@ export class TypeEvenementsService extends MainService<TypeEvenement, CreateType
 		return await this.typeEvenementModel.findById(id);
 	  }
 	
-	  async updateTypeEvenement(id: string, typeEvenement: Object) {
+	  async updateTypeEvenement(id: string, typeEvenement: CreateTypeEvenementDto) {
 		return await this.typeEvenementModel.findByIdAndUpdate(id, typeEvenement);
 	  }
 	

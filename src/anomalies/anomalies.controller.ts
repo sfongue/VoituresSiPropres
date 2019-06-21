@@ -25,7 +25,7 @@ export class AnomaliesController {
     } 
 
     @Put(':id')
-    async updateAnomalie(@Param('id') id: string, @Param('anomalie') anomalie: Object) {
+    async updateAnomalie(@Param('id') id: string, @Body() anomalie: CreateAnomalieDto) {
       return this.anomaliesService.updateAnomalie(id, anomalie);
     }
 

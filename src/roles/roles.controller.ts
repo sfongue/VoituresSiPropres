@@ -22,10 +22,10 @@ export class RolesController {
 	@Get(':id')
     async getRole(@Param('id') id: string) {
       return this.rolesService.getRole(id);
-    } 
+    }
 
     @Put(':id')
-    async updateRole(@Param('id') id: string, @Param('role') role: Object) {
+    async updateRole(@Param('id') id: string, @Body() role: CreateRoleDto) {
       return this.rolesService.updateRole(id, role);
     }
 

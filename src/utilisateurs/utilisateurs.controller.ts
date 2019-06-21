@@ -25,7 +25,7 @@ export class UtilisateursController {
     } 
 
     @Put(':id')
-    async updateUtilisateur(@Param('id') id: string, @Param('utilisateur') utilisateur: Object) {
+    async updateUtilisateur(@Param('id') id: string, @Param() utilisateur: CreateUtilisateurDto) {
       return this.utilisateursService.updateUtilisateur(id, utilisateur);
     }
 

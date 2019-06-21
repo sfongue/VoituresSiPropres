@@ -17,7 +17,7 @@ export class PortefeuillesService extends MainService<Portefeuille, CreatePortef
 		return await this.portefeuilleModel.findById(id);
 	  }
 	
-	  async updatePortefeuille(id: string, portefeuille: Object) {
+	  async updatePortefeuille(id: string, portefeuille: CreatePortefeuilleDto) {
 		return await this.portefeuilleModel.findByIdAndUpdate(id, portefeuille);
 	  }
 	

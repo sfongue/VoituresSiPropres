@@ -5,5 +5,5 @@ export const AnomalieSchema = new mongoose.Schema({
   intitule: String,
   id_portique: String,
   id_status: String,
-  created_at: Date,
+  created_at: String,
 });

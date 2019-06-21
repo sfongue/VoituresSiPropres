@@ -14,5 +14,5 @@ export class CreateAnomalieDto {
   readonly id_status: string;
 
   @ApiModelProperty()
-  readonly created_at: Date;
+  readonly created_at: string;
 }

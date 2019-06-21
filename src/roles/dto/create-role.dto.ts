@@ -1,4 +1,9 @@
+import { ApiModelProperty } from '@nestjs/swagger';
+
 export class CreateRoleDto {
+  @ApiModelProperty()
   readonly intitule: string;
-  readonly created_at: Date;
+  
+  @ApiModelProperty()
+  readonly created_at: string;
 }

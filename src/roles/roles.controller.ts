@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Delete, Param, Put } from '@nestjs/common';
 import { CreateRoleDto } from './dto/create-role.dto';
 import { RolesService } from './roles.service';
 import { Role as RoleInterface } from './interfaces/role.interface';
@@ -19,8 +19,18 @@ export class RolesController {
       return this.rolesService.findAll();
     }
 
-    // @Delete()
-    // async deleteItem(id): Promise<PostInterface[]> {
-    //     return "ok";
-    // }
+	@Get(':id')
+    async getRole(@Param('id') id: string) {
+      return this.rolesService.getRole(id);
+    } 
+
+    @Put(':id')
+    async updateRole(@Param('id') id: string, @Param('role') role: Object) {
+      return this.rolesService.updateRole(id, role);
+    }
+
+    @Delete(':id')
+    async deleteRole(@Param('id') id: string) {
+      return this.rolesService.deleteRole(id);
+    }
 }

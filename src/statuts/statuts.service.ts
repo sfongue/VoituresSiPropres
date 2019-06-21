@@ -13,4 +13,15 @@ export class StatutsService extends MainService<Statut, CreateStatutDto> {
 		super(statutModel);
 	}
   
+	async getStatut(id: string) {
+		return await this.statutModel.findById(id);
+	  }
+	
+	  async updateStatut(id: string, statut: Object) {
+		return await this.statutModel.findByIdAndUpdate(id, statut);
+	  }
+	
+	  async deleteStatut(id: string) {
+		return await this.statutModel.findByIdAndDelete(id);
+	  }
 }

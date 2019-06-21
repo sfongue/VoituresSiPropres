@@ -12,6 +12,18 @@ export class TypeEvenementsService extends MainService<TypeEvenement, CreateType
   constructor(
     @Inject(POST_MODEL_PROVIDER) private readonly typeEvenementModel: Model<TypeEvenement>) {
         super(typeEvenementModel);
-    }
+	}
+	
+	async getTypeEvenement(id: string) {
+		return await this.typeEvenementModel.findById(id);
+	  }
+	
+	  async updateTypeEvenement(id: string, typeEvenement: Object) {
+		return await this.typeEvenementModel.findByIdAndUpdate(id, typeEvenement);
+	  }
+	
+	  async deleteTypeEvenement(id: string) {
+		return await this.typeEvenementModel.findByIdAndDelete(id);
+	  }
 
 }

@@ -12,4 +12,16 @@ export class AssignationsService extends MainService<Assignation, CreateAssignat
     @Inject(POST_MODEL_PROVIDER) private readonly assignationModel: Model<Assignation>) {
 		  super(assignationModel);
 	}
+
+	async getAssignation(id: string) {
+		return await this.assignationModel.findById(id);
+	  }
+	
+	  async updateAssignation(id: string, assignation: Object) {
+		return await this.assignationModel.findByIdAndUpdate(id, assignation);
+	  }
+	
+	  async deleteAssignation(id: string) {
+		return await this.assignationModel.findByIdAndDelete(id);
+	  }
 }

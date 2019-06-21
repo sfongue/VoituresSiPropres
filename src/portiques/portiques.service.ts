@@ -14,4 +14,15 @@ export class PortiquesService extends MainService<Portique, CreatePortiqueDto> {
         super(portiqueModel);
     }
 
+	async getPortique(id: string) {
+		return await this.portiqueModel.findById(id);
+	  }
+	
+	  async updatePortique(id: string, portique: Object) {
+		return await this.portiqueModel.findByIdAndUpdate(id, portique);
+	  }
+	
+	  async deletePortique(id: string) {
+		return await this.portiqueModel.findByIdAndDelete(id);
+	  }
 }

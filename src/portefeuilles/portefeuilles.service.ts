@@ -12,4 +12,16 @@ export class PortefeuillesService extends MainService<Portefeuille, CreatePortef
     @Inject(POST_MODEL_PROVIDER) private readonly portefeuilleModel: Model<Portefeuille>) {
 		  super(portefeuilleModel);
 	}
+
+	async getPortefeuille(id: string) {
+		return await this.portefeuilleModel.findById(id);
+	  }
+	
+	  async updatePortefeuille(id: string, portefeuille: Object) {
+		return await this.portefeuilleModel.findByIdAndUpdate(id, portefeuille);
+	  }
+	
+	  async deletePortefeuille(id: string) {
+		return await this.portefeuilleModel.findByIdAndDelete(id);
+	  }
 }

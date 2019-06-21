@@ -20,17 +20,17 @@ export class AnomaliesController {
     }
 
     @Get(':id')
-    async getAnomalie(@Param('id') id: number) {
+    async getAnomalie(@Param('id') id: string) {
       return this.anomaliesService.getAnomalie(id);
     } 
 
     @Put(':id')
-    async updateAnomalie(@Param('id') id: number, @Param('anomalie') anomalie: Object) {
+    async updateAnomalie(@Param('id') id: string, @Param('anomalie') anomalie: Object) {
       return this.anomaliesService.updateAnomalie(id, anomalie);
     }
 
     @Delete(':id')
-    async deleteAnomalie(@Param('id') id: number) {
+    async deleteAnomalie(@Param('id') id: string) {
       return this.anomaliesService.deleteAnomalie(id);
     }
 }

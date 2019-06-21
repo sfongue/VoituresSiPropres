@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Delete, Param, Put } from '@nestjs/common';
 import { CreateAssignationDto } from './dto/create-assignation.dto';
 import { AssignationsService } from './assignations.service';
 import { ApiUseTags } from '@nestjs/swagger';
@@ -19,8 +19,18 @@ export class AssignationsController {
       return this.assignationsService.findAll();
     }
 
-    // @Get('id')
-    // async findById(id): Promise<AssignationInterface[]> {
-    //   return this.assignationsService.findById(id);
-    // }
+	@Get(':id')
+    async getAssignation(@Param('id') id: string) {
+      return this.assignationsService.getAssignation(id);
+    } 
+
+    @Put(':id')
+    async updateAssignation(@Param('id') id: string, @Param('assignation') assignation: Object) {
+      return this.assignationsService.updateAssignation(id, assignation);
+    }
+
+    @Delete(':id')
+    async deleteAssignation(@Param('id') id: string) {
+      return this.assignationsService.deleteAssignation(id);
+    }
 }

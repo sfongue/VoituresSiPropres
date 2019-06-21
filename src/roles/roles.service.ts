@@ -10,8 +10,19 @@ import { UtilisateurSchema } from 'src/utilisateurs/utilisateur.schema';
 @Injectable()
 export class RolesService extends MainService<Role, CreateRoleDto> {
   constructor(
-    @Inject(POST_MODEL_PROVIDER) private readonly statutModel: Model<Role>) {
-		super(statutModel);
+    @Inject(POST_MODEL_PROVIDER) private readonly roleModel: Model<Role>) {
+		super(roleModel);
 	}
   
+	async getRole(id: string) {
+		return await this.roleModel.findById(id);
+	  }
+	
+	  async updateRole(id: string, role: Object) {
+		return await this.roleModel.findByIdAndUpdate(id, role);
+	  }
+	
+	  async deleteRole(id: string) {
+		return await this.roleModel.findByIdAndDelete(id);
+	  }
 }

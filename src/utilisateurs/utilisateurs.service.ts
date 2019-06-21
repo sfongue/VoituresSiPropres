@@ -14,4 +14,16 @@ export class UtilisateursService extends MainService<Utilisateur, CreateUtilisat
         super(utilisateurModel);
     }
 
+	async getUtilisateur(id: string) {
+		return await this.utilisateurModel.findById(id);
+	  }
+	
+	  async updateUtilisateur(id: string, utilisateur: Object) {
+		return await this.utilisateurModel.findByIdAndUpdate(id, utilisateur);
+	  }
+	
+	  async deleteUtilisateur(id: string) {
+		return await this.utilisateurModel.findByIdAndDelete(id);
+	  }
+
 }

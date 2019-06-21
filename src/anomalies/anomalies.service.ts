@@ -14,15 +14,15 @@ export class AnomaliesService extends MainService<Anomalie, CreateAnomalieDto> {
 		super(anomalieModel);
   }
   
-  async getAnomalie(id_anomalie: number) {
+  async getAnomalie(id_anomalie: string) {
     return await this.anomalieModel.findById(id_anomalie);
   }
 
-  async updateAnomalie(id_anomalie: number, anomalie: Object) {
-    return await this.anomalieModel.update(id_anomalie, anomalie);
+  async updateAnomalie(id_anomalie: string, anomalie: Object) {
+    return await this.anomalieModel.findByIdAndUpdate(id_anomalie, anomalie);
   }
 
-  async deleteAnomalie(id_anomalie: number) {
-    return await this.anomalieModel.deleteOne(id_anomalie);
+  async deleteAnomalie(id_anomalie: string) {
+    return await this.anomalieModel.findByIdAndDelete(id_anomalie);
   }
 }
